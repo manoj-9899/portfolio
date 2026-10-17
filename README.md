@@ -1,76 +1,61 @@
-# [Austin Serb - Web Developer Portfolio](https://www.austinserb.com/) - Nextjs, React Zero UI
+# Manoj Pawar — Software & Full-Stack Developer Portfolio
 
+Personal developer portfolio for **Manoj Shivaji Pawar**, Computer Engineering undergraduate (7th Semester) at Dr. Babasaheb Ambedkar Technological University (DBATU), Lonere.
 
+The portfolio is built with Next.js, React 19, TypeScript, Tailwind CSS v4, and Motion. It showcases full-stack web applications, developer tooling, and applied cryptography systems with physics-based zero-re-render card animations.
 
-![austin-serb-portoflio-website-front-end-engineer](https://github.com/user-attachments/assets/68aaf3f3-ec9b-4186-ac31-77f6288bc5d3) 
- 
+## Live Website & Profiles
 
-This portfolio started as a personal technical challenge. I wanted to take a design direction I loved and rebuild it the way a **modern software engineer** would: with Next.js, React Server Components, and a zero-re-render approach to complex animations.
+- **Portfolio:** [manoj-9899.github.io/manojpawar](https://manoj-9899.github.io/manojpawar/)
+- **GitHub:** [github.com/manoj-9899](https://github.com/manoj-9899)
+- **LinkedIn:** [linkedin.com/in/pawar-manoj](https://linkedin.com/in/pawar-manoj/)
+- **Email:** [manojpawar.dev@gmail.com](mailto:manojpawar.dev@gmail.com)
 
-A major creative spark for this project came from the Webflow/Framer site **“Launchfolio” by Joseph Alexander**
-[https://launchfolio.framer.website/](https://launchfolio.framer.website/)
+## Featured Projects
 
-Joseph’s work is incredible and set a visual bar that pushed me to explore what the same feel could perform like when rebuilt from scratch using real engineering practices. My goal wasn’t to replicate it, but to push myself technically while staying in conversation with that aesthetic.
+1. **[Post-Quantum Document Enclave & Forensic Attribution System](https://github.com/manoj-9899/sih)**
+   Browser-based document security using post-quantum cryptography, hybrid encryption, digital signing, watermarking, forensic attribution, and tamper-evident audit trails.
+2. **[DevHabits](https://github.com/manoj-9899/devhabits)**
+   Local-first habit tracker featuring a responsive React dashboard, Node.js CLI/TUI, SQLite database, streak analytics, and activity heatmaps.
+3. **[CampusCanteen](https://github.com/manoj-9899/CampusCanteen)**
+   Full-stack campus canteen pre-ordering and queue management platform with role-based authentication, real-time inventory tracking, and QR-code pickup verification.
+4. **[FocusTube](https://github.com/manoj-9899/focustube)**
+   AI-powered YouTube focus assistant combining a Chrome Extension (Manifest V3), Groq LLM inference, productivity scoring, session summaries, and a Node.js/Express backend.
 
-So this project became a playground for:
+## Tech Stack
 
-* A fully custom Next.js 15 build
-* My Zero Re-render [UI State-management library React Zero UI](https://github.com/react-zero-ui/core) 
-* Zero re-render animation patterns
-* Performance testing under heavy interaction
-* Making animations that actually work on mobile
-* Understanding the limits of server and client composition
+- **Languages:** C++, Python, JavaScript, TypeScript, SQL
+- **Frontend:** React, Next.js (App Router), Tailwind CSS v4, Motion
+- **Backend & APIs:** Node.js, Express.js, Prisma, REST APIs
+- **Databases:** PostgreSQL, SQLite, Supabase
+- **Tools & Platforms:** Git, GitHub, Linux, VS Code
 
-I learned a ton building it, and I hope others can learn from it as well.
+## Getting Started
 
----
+### Prerequisites
 
-### Usage Guidelines
+- Node.js 18+ (Node 20+ recommended)
+- npm or pnpm
 
-I’m sharing this repo publicly because I believe real-world examples help developers grow faster.
-You’re absolutely welcome to:
+### Installation
 
-* Read through the code
-* Explore the layout ideas
-* Study how the animation system works
-* Borrow patterns and approaches
-* Apply concepts to your own style
+```bash
+# Clone the repository
+git clone https://github.com/manoj-9899/manojpawar.git
 
-However, I ask that you **don’t clone or repurpose this portfolio directly**.
+# Install dependencies
+npm install
 
-It’s simply important to me that the design and structure don’t end up as a sea of lookalikes online.
+# Start the local development server
+npm run dev
 
-This project represents many hours of work and my engineering philosophy. I want to keep that identity intact.
+# Run TypeScript check
+npm run type-check
 
-So Please:
+# Build for production
+npm run build
+```
 
-* Learn from it
-* Build your own version
-* Take inspiration and evolve it
-* Put the Work/Time in
+## License
 
-Please Do NOT
-* Use this repo as a drop-in template for your portfolio
-* Ship a 1:1 copy of the code
-* Clone the identity
-
----
-
-### A Note on Respecting Inspiration
-
-Since this project itself was HEAVILY inspired by Joseph Alexander’s Launchfolio concept, I’m especially aware of how design influence flows across the web. Inspiration is healthy. Cloning is not.
-
-As long as you’re learning and creating something new from this repository, I’m 100 percent supportive.
-
----
-
-### Final Thoughts
-
-This portfolio is here to inspire, teach, and challenge your engineering instincts.
-If it helps you become a better developer, it already accomplished what I wanted.
-
-### Contact
-
-**[owner@serbyte.net](mailto:owner@serbyte.net)**
-
-**[Serbyte Developent - Seattle](https://serbyte.net)**
+Personal portfolio content and assets © 2026 Manoj Shivaji Pawar. All rights reserved.

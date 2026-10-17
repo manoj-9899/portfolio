@@ -13,57 +13,32 @@ interface ProjectItem {
 // Project data for schema
 const projectsData: ProjectItem[] = [
   {
-    name: "React Zero-UI",
-    url: externalLinks.zeroCore, // external canonical
-    date: "2025-06-01",
-    description: "Zero Re-Render State Library",
+    name: "Post-Quantum Document Enclave & Forensic Attribution System",
+    url: "https://github.com/manoj-9899/sih",
+    date: "2026-01-01",
+    description: "Browser-based document security using post-quantum cryptography, encryption, signing, watermarking, forensic attribution, and tamper-evident audit trails.",
     type: "SoftwareSourceCode",
   },
   {
-    name: "Bespoke Tint & PPF",
-    url: SITE_SLUGS.projectLinks.bespoke, // internal case study
-    external: "https://www.bespokeauto.org", // client site
-    date: "2025-03-11",
-    description: "Automotive Styling Website",
-    type: "WebSite",
-  },
-
-  {
-    name: "Automedics",
-    url: SITE_SLUGS.projectLinks.automedics, // internal case study
-    external: "https://www.automedicskirkland.com",
-    date: "2024-12-02",
-    description: "Automotive Repair Website",
-    type: "WebSite",
-  },
-  {
-    name: "Iron & Oak",
-    url: SITE_SLUGS.projectLinks.iao, // internal case study
-    external: "https://ironandoaksecurity.com",
-    date: "2024-06-15",
-    description: "Private Security Website",
-    type: "WebSite",
-  },
-  {
-    name: "Vets Choice Insurance",
-    url: externalLinks.vetsChoice, // external canonical
-    date: "2025-05-20",
-    description: "Pet Insurance Website",
-    type: "WebSite",
-  },
-  {
-    name: "Zero Icon Sprite",
-    url: externalLinks.zeroIconSprite, // external canonical
-    date: "2024-06-15",
-    description: "SVG Build Tool",
+    name: "DevHabits",
+    url: "https://github.com/manoj-9899/devhabits",
+    date: "2025-10-01",
+    description: "Local-first habit tracker with React dashboard, Node.js CLI/TUI, SQLite, streak analytics, and activity heatmaps.",
     type: "SoftwareApplication",
   },
   {
-    name: "Entitled",
-    url: externalLinks.entitled, // external canonical
-    date: "2024-02-10",
-    description: "Event Management Web App",
+    name: "CampusCanteen",
+    url: "https://github.com/manoj-9899/CampusCanteen",
+    date: "2025-05-01",
+    description: "Full-stack canteen pre-ordering and queue management platform with authentication, inventory, QR pickup verification, and staff queue operations.",
     type: "WebApplication",
+  },
+  {
+    name: "FocusTube",
+    url: "https://github.com/manoj-9899/focustube",
+    date: "2025-02-01",
+    description: "AI-powered YouTube focus assistant using Chrome extension, Groq LLM inference, focus scoring, session summaries, and Node.js/Express backend.",
+    type: "SoftwareApplication",
   },
 ]
 
@@ -90,8 +65,7 @@ export function buildProjectGraphMinimal(slug: string, pd: ProjectData, type = "
         ...(pd.hero.link ? { sameAs: [pd.hero.link] } : {}),
         mainEntityOfPage: id,
         isPartOf: { "@id": `${SITE}${SITE_SLUGS.projects}#page` },
-        author: { "@id": `${SITE}/#austin-serb` },
-        publisher: { "@id": `${SITE}#org` },
+        author: { "@id": `${SITE}/#manoj-pawar` },
         inLanguage: "en",
       },
       {
@@ -127,7 +101,7 @@ export const projectsGraph: Graph = {
       "@type": "CollectionPage",
       "@id": `${SITE}${SITE_SLUGS.projects}#page`,
       url: `${SITE}${SITE_SLUGS.projects}`,
-      name: "Projects - Austin Serb",
+      name: "Projects - Manoj Pawar",
       isPartOf: { "@id": `${SITE}#website` },
       mainEntity: { "@id": `${SITE}${SITE_SLUGS.projects}#list` }, // <-- REFERENCES ABOVE
       mainEntityOfPage: `${SITE}${SITE_SLUGS.projects}`,
@@ -175,30 +149,11 @@ export const siteGraph = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
-      "@id": `${SITE}#org`,
-      name: "Serbyte Development",
-      url: SITE,
-      logo: { "@id": `${SITE}#logo` },
-      sameAs: Object.values(SITE_NAP.profiles),
-      contactPoint: [
-        {
-          "@type": "ContactPoint",
-          contactType: "Hiring",
-          email: `mailto:${SITE_NAP.email}`,
-          areaServed: "US",
-          availableLanguage: ["en"],
-        },
-      ],
-    },
-    {
       "@type": "Person",
-      "@id": `${SITE}/#austin-serb`,
-      name: "Austin Serb",
+      "@id": `${SITE}/#manoj-pawar`,
+      name: "Manoj Shivaji Pawar",
       url: SITE,
-      jobTitle: "Full-Stack Engineer",
-      image: { "@id": `${SITE}#headshot` },
-      worksFor: { "@id": `${SITE}#org` },
+      jobTitle: "Computer Engineering Student & Developer",
       sameAs: Object.values(SITE_NAP.profiles),
       email: SITE_NAP.email,
     },
@@ -206,11 +161,8 @@ export const siteGraph = {
       "@type": "WebSite",
       "@id": `${SITE}#website`,
       url: SITE,
-      name: "Austin Serb - Developer Portfolio",
-      publisher: { "@id": `${SITE}#org` },
+      name: "Manoj Pawar - Developer Portfolio",
       inLanguage: "en",
     },
-    { "@type": "ImageObject", "@id": `${SITE}#headshot`, url: `${SITE}/profile.webp` },
-    { "@type": "ImageObject", "@id": `${SITE}#logo`, url: `${SITE}/serbyte-logo.png` },
   ],
 }

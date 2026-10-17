@@ -10,9 +10,9 @@ import { homeGraph } from "@/config/schemas"
 export const metadata: Metadata = {
   title: SITE_CONFIG.title,
   description:
-    "Explore the web developer portfolio of Austin Serb, a full-stack engineer building fast, modern web applications. See what a professional coding portfolio looks like, featuring projects in React, Next.js, and a custom-built React-Zero-UI library.",
-  authors: [{ name: "Austin Serb" }],
-  creator: "Austin Serb",
+    "Explore the portfolio of Manoj Shivaji Pawar, Computer Engineering student and developer building fast, modern web applications, developer tools, and secure software systems.",
+  authors: [{ name: "Manoj Shivaji Pawar" }],
+  creator: "Manoj Shivaji Pawar",
   alternates: {
     canonical: SITE_SLUGS.home,
   },

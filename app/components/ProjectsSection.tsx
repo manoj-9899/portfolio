@@ -7,7 +7,7 @@ import { SITE_SLUGS } from "@/config/siteConfig"
 
 export const ProjectsSection: React.FC = () => {
   return (
-    <section className="inside-container bg-white">
+    <section className="inside-container pt-8 md:pt-12 lg:pt-14 pb-12 md:pb-20 lg:pb-24 bg-white">
       {/* overlay heading */}
       <div className="pointer-events-none relative z-5 mix-blend-exclusion">
         <AnimatedText

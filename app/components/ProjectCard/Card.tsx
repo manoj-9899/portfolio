@@ -9,7 +9,7 @@ export const Card = ({
   reveal = true,
   text = "View Project",
 }: {
-  src: StaticImageData
+  src?: StaticImageData | string
   alt: string
   color?: string
   type?: string
@@ -39,7 +39,19 @@ export const Card = ({
             {text}
           </span>
         </span>
-        <Image className="h-full w-full bg-gray-200" src={src} alt={alt} priority decoding="async" />
+        {src ? (
+          <Image className="h-full w-full bg-gray-200 object-cover" src={src} alt={alt} priority decoding="async" />
+        ) : (
+          <div
+            className="relative h-full w-full min-h-[260px] overflow-hidden bg-slate-950 md:min-h-[300px]"
+            style={{
+              background: `radial-gradient(ellipse at 85% 15%, ${color}45, transparent 65%), linear-gradient(145deg, #0f172a 0%, #020617 100%)`,
+            }}
+          >
+            <div className="absolute inset-0 opacity-[0.12] bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]" />
+            <div className="pointer-events-none absolute inset-0 [background-image:url('/assets/framer-noise.png')] [background-size:128px] opacity-10" />
+          </div>
+        )}
       </div>
     </div>
   )

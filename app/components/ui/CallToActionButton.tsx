@@ -1,10 +1,10 @@
 import Image from "next/image"
-import profilePhoto from "@/public/assets/founder.jpg"
 import clsx from "clsx"
 import type { Variants } from "motion"
 import { MotionButton, MotionDiv } from "@/app/utils/lazy-ui"
 import { SITE_NAP } from "@/config/siteConfig"
 import { Icon } from "../Icon"
+import profilePhoto from "@/app/images/profile1.webp"
 
 export const CallToActionButton = () => {
   const buttonVariants: Variants = {
@@ -60,7 +60,7 @@ export const CallToActionButton = () => {
   }
 
   return (
-    <a href={SITE_NAP.profiles.github} target="_blank" rel="noopener" aria-label="Austin Serb's GitHub">
+    <a href={SITE_NAP.profiles.github} target="_blank" rel="noopener" aria-label="Manoj Pawar's GitHub">
       <MotionButton
         initial="initial"
         animate="animate"
@@ -71,8 +71,8 @@ export const CallToActionButton = () => {
         <div className="pointer-events-none absolute inset-0.5 -z-1 rounded-full [background-image:url('/assets/framer-noise.png')] [background-size:164px] bg-repeat opacity-12" />
         <div className="relative flex items-center gap-1">
           {/* Avatar */}
-          <div className="relative h-7 w-7 rounded-full">
-            <Image src={profilePhoto} alt="Profile photo of the founder" fill sizes="50px" className="rounded-full object-cover ring-2 ring-white/75" />
+          <div className="relative h-7 w-7 overflow-hidden rounded-full ring-2 ring-white/75">
+            <Image src={profilePhoto} alt="Manoj Shivaji Pawar" fill sizes="50px" className="object-cover" />
           </div>
 
           {/* + You entrance */}

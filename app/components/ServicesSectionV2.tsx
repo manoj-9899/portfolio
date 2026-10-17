@@ -7,24 +7,24 @@ import { MotionUl, MotionLi } from "../utils/lazy-ui"
 
 const tech = [
   { name: "React", src: "react" },
-  { name: "Next", src: "next" },
+  { name: "Next.js", src: "next" },
   { name: "TypeScript", src: "typescript" },
   { name: "Python", src: "python" },
-  { name: "Express", src: "express" },
-  { name: "OpenAI", src: "openai" },
-  { name: "MongoDB", src: "mongodb" },
+  { name: "C++", src: "cpp" },
+  { name: "Express.js", src: "express" },
+  { name: "Node.js", src: "nodejs" },
   { name: "PostgreSQL", src: "postgresql" },
-  { name: "Figma", src: "figma" },
-  { name: "Motion", src: "motion" },
+  { name: "Tailwind CSS", src: "tailwind" },
+  { name: "Git & Linux", src: "github" },
 ]
 
 const services = [
   { name: "Full Stack Development", src: "magic-wand" },
-  { name: "Next.js Development", src: "paint-bucket" },
-  { name: "Database Architecture", src: "web" },
-  { name: "UI/UX Design", src: "world" },
-  { name: "API Development", src: "planet" },
-  { name: "Advanced Motion", src: "cube" },
+  { name: "Next.js & React Frontend", src: "paint-bucket" },
+  { name: "Backend & REST APIs", src: "planet" },
+  { name: "PostgreSQL & Database Design", src: "web" },
+  { name: "Applied Cryptography & Security", src: "cube" },
+  { name: "Machine Learning & AI Tools", src: "world" },
 ]
 
 const container: Variants = {

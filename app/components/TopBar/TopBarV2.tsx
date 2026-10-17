@@ -19,8 +19,10 @@ export const TopBarV2: React.FC = () => {
           <div className="flex items-center gap-4 px-4 py-3 md:gap-8 md:py-2.5">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 font-medium text-nowrap">
-              <Icon name="serbyte" height={24} width={24} className="rounded shadow-md" />
-              Austin Serb
+              <span className="flex h-6 w-6 items-center justify-center rounded bg-black text-[10px] font-bold tracking-tight text-white shadow-md">
+                MP
+              </span>
+              Manoj Pawar
             </Link>
 
             {/* Desktop Navigation */}

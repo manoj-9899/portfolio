@@ -1,9 +1,5 @@
 "use client"
 import { AnimatedCard, HeroOffset } from "./ProjectCard/AnimatedCard"
-import iaoPreview from "@/app/images/iao-preview-v2.webp"
-import bespokePreview from "@/app/images/bespoke-preview-v2.webp"
-import automedicsPreview from "@/app/images/automedics-preview-v2.webp"
-import reactZeroUIPreview from "@/app/images/react-zero-ui-preview.jpg"
 import clsx from "clsx"
 import { useOffset } from "../hooks/useOffset"
 import { useIsMobile } from "../hooks/useMediaQuery"
@@ -11,6 +7,10 @@ import { useRef, useEffect } from "react"
 import { useScroll, useSpring } from "motion/react"
 import { useUI } from "@react-zero-ui/core"
 import { externalLinks } from "@/config/siteConfig"
+import postQuantumPreview from "@/app/images/post-quantum.webp"
+import devhabitsPreview from "@/app/images/devhabits.webp"
+import campuscanteenPreview from "@/app/images/campuscanteen.webp"
+import focustubePreview from "@/app/images/focustube.webp"
 
 const ids = ["automedics", "react-zero-ui", "iron-and-oak", "bespoke"]
 
@@ -70,49 +70,52 @@ export function ProjectsGrid({ className }: { className?: string }) {
       <div className="relative z-4 grid grid-cols-1 grid-rows-1 gap-4 md:grid-cols-2 md:grid-rows-2">
         <AnimatedCard
           key={"react-zero-ui"}
-          src={reactZeroUIPreview}
-          alt={"React-Zero-UI - Preview"}
+          src={postQuantumPreview}
+          alt={"Post-Quantum-Enclave Preview"}
           offset={offsets["react-zero-ui"]}
           gridId="react-zero-ui"
           color="#3B06D1"
-          type="Zero Re-Render State Library"
+          type="Post-Quantum Security Enclave"
           progress={progress}
-          href={externalLinks.zeroCore}
+          href="https://github.com/manoj-9899/sih"
           dataText="View on GitHub"
         />
         <AnimatedCard
-          key="Bespoke"
-          src={bespokePreview}
-          alt={"Bespoke Preview"}
+          key="DevHabits"
+          src={devhabitsPreview}
+          alt={"DevHabits Preview"}
           offset={offsets["bespoke"]}
           gridId="bespoke"
           color="#024EFC"
-          type="Automotive Styling"
+          type="Local-First Habit Tracker"
           progress={progress}
-          dataText="View Case Study"
+          href="https://github.com/manoj-9899/devhabits"
+          dataText="View on GitHub"
         />
 
         <AnimatedCard
-          key="Automedics"
-          src={automedicsPreview}
-          alt={"Automedics Preview"}
+          key="CampusCanteen"
+          src={campuscanteenPreview}
+          alt={"CampusCanteen Preview"}
           offset={offsets["automedics"]}
           gridId="automedics"
           color="#DA961A"
-          type="Automotive Repair"
+          type="Canteen & Queue Platform"
           progress={progress}
-          dataText="View Case Study"
+          href="https://github.com/manoj-9899/CampusCanteen"
+          dataText="View on GitHub"
         />
         <AnimatedCard
-          key={"IAO"}
-          src={iaoPreview}
-          alt={"IAO Preview"}
+          key={"FocusTube"}
+          src={focustubePreview}
+          alt={"FocusTube Preview"}
           offset={offsets["iron-and-oak"]}
           gridId="iron-and-oak"
           color="#13739C"
-          type="Private Security"
+          type="AI YouTube Focus Assistant"
           progress={progress}
-          dataText="View Case Study"
+          href="https://github.com/manoj-9899/focustube"
+          dataText="View on GitHub"
         />
       </div>
     </section>

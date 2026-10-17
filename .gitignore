@@ -35,5 +35,5 @@ next-env.d.ts
 # VS Code
 !.vscode/
 # *.code-workspace
-.history/
-
+# backup files
+app/favicon_.ico

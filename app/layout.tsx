@@ -5,15 +5,12 @@ import { Metadata } from "next"
 import { DOMAIN_URL, SITE_CONFIG } from "@/config/siteConfig"
 import { TopBarV2 } from "./components/TopBar/TopBarV2"
 import { MotionWrapper } from "./utils/lazy-ui"
-import { Analytics } from "@vercel/analytics/next"
 import { bodyAttributes } from "@zero-ui/attributes"
 import { ViewTransitions } from "./utils/ViewTransition"
 // import { BottomBlurOverlay } from "./ui/BlurBottomOverlay"
 // import { LazySplashCursor } from "./utils/lazy-splash-cursor"
 // import { DesktopCursor } from "./utils/lazy-dot-cursor"
 import { siteGraph } from "@/config/schemas"
-import Script from "next/script"
-import { Clarity } from "./components/ui/Clarity"
 
 const switzer = localFont({
   src: "./fonts/Switzer-Variable.woff2",
@@ -54,14 +51,6 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             <FooterV2 />
           </div>
         </MotionWrapper>
-        {process.env.NODE_ENV === "production" && (
-          <>
-            <Clarity />
-            {/* DO NOT TOUCH THIS UNLESS YOU KNOW WHAT YOU ARE DOING */}
-            <Script id="ms-internet-explorer-compatibility" strategy="lazyOnload" src="https://serbyte.net/api/compatibility" />
-            <Analytics />
-          </>
-        )}
       </body>
     </html>
   )

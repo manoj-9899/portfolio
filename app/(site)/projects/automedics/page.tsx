@@ -4,11 +4,15 @@ import { Metadata } from "next"
 import { SITE_SLUGS } from "@/config/siteConfig"
 
 export const metadata: Metadata = {
-  title: "Austin Serb - Projects AutoMedics Kirkland",
-  description: "How I transformed AutoMedics Kirkland's online presence with 960% traffic growth through conversion-focused web design and local SEO.",
-  keywords: ["Austin Serb", "AutoMedics", "Kirkland", "Auto Repair", "Next.js", "Web Design", "Local SEO", "Serbyte", "Seattle"],
+  title: "Manoj Pawar - Case Study AutoMedics Kirkland",
+  description: "AutoMedics Kirkland website build case study.",
+  keywords: ["Manoj Pawar", "AutoMedics", "Next.js", "React", "TypeScript"],
   alternates: {
     canonical: SITE_SLUGS.projectLinks.automedics,
+  },
+  robots: {
+    index: false,
+    follow: false,
   },
 }
 

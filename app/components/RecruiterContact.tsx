@@ -2,11 +2,11 @@ import Image from "next/image"
 import { H3, Text } from "@/app/ui/Elements"
 import { MotionDiv } from "@/app/utils/lazy-ui"
 import { Icon } from "./Icon"
-import profilePhoto from "@/app/images/profile.webp"
 import { SITE_NAP } from "@/config/siteConfig"
 import { Mail } from "@react-zero-ui/icon-sprite"
 import { BlackButtonLink } from "./ui/BlackButtonLink"
 import { WhiteButtonLink } from "./ui/WhiteButtonLink"
+import profilePhoto from "@/app/images/profile1.webp"
 
 export const RecruiterContact: React.FC = () => {
   return (
@@ -21,11 +21,11 @@ export const RecruiterContact: React.FC = () => {
         >
           <div className="flex w-fit items-center gap-3 p-2 max-lg:justify-center">
             <div className="relative h-12 w-12 overflow-hidden rounded-full ring-4 ring-slate-200">
-              <Image src={profilePhoto} alt="Austin Serb" fill sizes="80px" className="object-cover" />
+              <Image src={profilePhoto} alt="Manoj Shivaji Pawar" fill sizes="80px" className="object-cover" />
             </div>
             <div className="flex flex-col items-start text-sm whitespace-nowrap text-slate-700">
-              <h2 className="font-medium text-slate-900">Austin Serb</h2>
-              <p className="text-slate-500">Full-Stack Engineer</p>
+              <h2 className="font-medium text-slate-900">Manoj Shivaji Pawar</h2>
+              <p className="text-slate-500">Computer Engineering Undergraduate</p>
             </div>
           </div>
 
@@ -34,11 +34,11 @@ export const RecruiterContact: React.FC = () => {
               <span>
                 Building Something Amazing? <br />
               </span>
-              <span className="text-slate-500">Let&apos;s chat.</span>
+              <span className="text-slate-500">Let&apos;s connect.</span>
             </H3>
             <Text className="max-w-2xl text-center text-balance">
-              I build fast, accessible web apps with React, Next.js, and TypeScript. I&apos;m looking for teams that value product quality, performance, and
-              thoughtful UX.
+              I build robust web applications and secure software systems with React, Next.js, TypeScript, and Node.js.
+              I&apos;m open to software engineering internships, entry-level opportunities, and exciting collaborative projects.
             </Text>
           </div>
 
@@ -57,14 +57,6 @@ export const RecruiterContact: React.FC = () => {
               GitHub
             </WhiteButtonLink>
           </div>
-
-          {/* <div className="flex items-center gap-3 opacity-70 max-lg:justify-center  ">
-            <WhiteButtonLink href={"https://cal.com/austinserb/intro"} className="relative">
-              <Icon name="calendar" height={18} width={18} className="h-[18px] w-[18px] text-slate-700 " />
-              Book a call
-              <CalIcon className="h-auto w-20 text-gray-900 absolute -right-24" />
-            </WhiteButtonLink>
-          </div> */}
         </MotionDiv>
       </div>
     </section>

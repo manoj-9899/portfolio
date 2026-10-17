@@ -12,16 +12,8 @@ export const socialLinks = [
     icon: "linkedin",
   },
   {
-    href: SITE_NAP.profiles.facebook,
-    icon: "facebook",
-  },
-  {
     href: SITE_NAP.profiles.github,
     icon: "github",
-  },
-  {
-    href: SITE_NAP.profiles.x,
-    icon: "x",
   },
 ]
 
@@ -39,16 +31,16 @@ export const FooterV2: React.FC = () => {
           <ul className="flex flex-col justify-between gap-5.5 border-b border-gray-500 pb-6 text-sm md:flex-row md:items-center md:gap-8">
             <li className="flex flex-col gap-1 md:gap-2">
               <span className="text-gray-500">Email</span>
-              <Link href="mailto:austin@serbyte.net" className="w-fit text-sm transition-colors duration-200 hover:text-gray-300">
-                austin@serbyte.net
+              <Link href={`mailto:${SITE_NAP.email}`} className="w-fit text-sm transition-colors duration-200 hover:text-gray-300">
+                {SITE_NAP.email}
               </Link>
             </li>
-            {/* <li className="flex flex-col gap-1 md:gap-2">
-              <span className="text-gray-500">Call or Text</span>
+            <li className="flex flex-col gap-1 md:gap-2">
+              <span className="text-gray-500">Phone</span>
               <Link href={`tel:${SITE_NAP.phone}`} className="w-fit text-sm transition-colors duration-200 hover:text-gray-300">
                 {SITE_NAP.formattedPhone}
               </Link>
-            </li> */}
+            </li>
             <li className="flex flex-col gap-2">
               <span className="text-gray-500">Socials</span>
               <Socials socialLinks={socialLinks} />
@@ -73,7 +65,7 @@ export const FooterV2: React.FC = () => {
         <div className="flex flex-col-reverse justify-between gap-2 text-xs text-nowrap md:flex-row">
           <div className="flex items-center gap-5.5 max-sm:flex-wrap">
             <h3>
-              <span className="text-[#b8b8b8]">Based in </span> Seattle, Washington, USA
+              <span className="text-[#b8b8b8]">Based in </span> Maharashtra, India
             </h3>
             <div className="flex gap-4">
               {/* <Link href="/terms-of-service" className="text-sm transition-colors duration-200 hover:text-gray-300">
@@ -84,10 +76,10 @@ export const FooterV2: React.FC = () => {
               </Link> */}
             </div>
           </div>
-          <span className="text-[#b8b8b8]">© 2025 Austin Serb</span>
+          <span className="text-[#b8b8b8]">© 2026 Manoj Shivaji Pawar</span>
         </div>
         <h2 className="large-brand-text absolute -bottom-16 left-0 flex w-full items-center justify-center font-medium whitespace-nowrap text-white md:text-[180px] lg:text-[240px]">
-          Austin Serb
+          Manoj Pawar
         </h2>
       </div>
     </footer>

@@ -323,13 +323,13 @@ export const iao: ProjectData = {
     description:
       "I dug into Iron & Oak Seattle's origin story-founded amid the COVID-19 disruptions-and rebuilt their website in Next.js around a clear, narrative-driven structure. I also scraped the web for press mentions and coverage to reinforce credibility. The goal was simple: increase qualified online applicants. It worked, driving a noticeable lift in submissions.",
     categories: ["Next.js", "Web Design", "Web Development", "Storytelling"],
-    link: "https://iao-seattle.vercel.app/?src=serbyte",
+    link: "https://iao-seattle.vercel.app/",
   },
   slug: "iron-and-oak",
   beforeAfter: {
     heroBefore: heroBeforeIao,
     heroBeforeMobile: heroBeforeMobileIao,
-    iframe: "https://iao-seattle.vercel.app/?src=serbyte",
+    iframe: "https://iao-seattle.vercel.app/",
     beforeAltText: "Iron & Oak Seattle Before",
     beforeMobileAltText: "Iron & Oak Seattle Before Mobile",
     afterAltText: "Iron & Oak Seattle After Website Design",

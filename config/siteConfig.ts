@@ -1,49 +1,45 @@
-export const DOMAIN_URL = "https://www.austinserb.com"
+export const DOMAIN_URL = "https://manoj-9899.github.io/manojpawar"
 
 export const SITE_CONFIG = {
-  title: "Austin Serb - Web Developer Portfolio",
-  description: "Portfolio of Austin Serb, Seattle-based full-stack engineer. Specializing in Next.js, React, TypeScript, and Tailwind CSS.",
+  title: "Manoj Pawar - Software & Full-Stack Developer Portfolio",
+  description:
+    "Portfolio of Manoj Shivaji Pawar, Computer Engineering student and developer specializing in React, Next.js, TypeScript, Node.js, and secure software systems.",
   url: DOMAIN_URL ?? "http://localhost:3000",
-  siteName: "Austin Serb",
-  keywords: ["Austin Serb", "Serbyte", "React Zero-UI", "Next.js", "React", "TypeScript", "Full-Stack Engineer", "Seattle"],
-  ogImage: "/assets/bg-home-poster-optimized.webp",
-  logo: "/serbyte-logo.png",
+  siteName: "Manoj Pawar",
+  keywords: ["Manoj Pawar", "Manoj Shivaji Pawar", "Full-Stack Developer", "Computer Engineering", "React", "Next.js", "TypeScript", "Node.js", "Python", "C++"],
+  ogImage: "/opengraph-image.jpg",
+  logo: "/favicon.ico",
 } as const
 
 export const SITE_NAP = {
-  name: "Austin Serb",
-  googleBusinessType: "LocalBusiness" as const,
-  contact: "Austin Serb",
-  contactTitle: "CEO",
-  email: "austin@serbyte.net",
-  phone: "+12066596727",
-  formattedPhone: "+1 (206) 659-6727",
-  addressLink: "https://www.google.com/maps/search/?api=1&query=serbyte+development",
-  street: "12601 NE 124th ST",
-  city: "Kirkland",
-  state: "WA",
-  zipCode: "98034",
-  openingHours: [{ days: "Mon - Sat", hours: "8am - 6pm" }] as const,
-  googleReviewLink: "https://g.page/r/CXHVs1ony_76EAI/review",
+  name: "Manoj Shivaji Pawar",
+  googleBusinessType: "Person" as const,
+  contact: "Manoj Pawar",
+  contactTitle: "Computer Engineering Student & Developer",
+  email: "manojpawar.dev@gmail.com",
+  phone: "+918805348821",
+  formattedPhone: "+91 8805348821",
+  addressLink: "https://maps.google.com/?q=DBATU+Lonere",
+  street: "DBATU Campus",
+  city: "Lonere",
+  state: "Maharashtra",
+  zipCode: "402103",
+  openingHours: [{ days: "Mon - Fri", hours: "9am - 6pm" }] as const,
+  googleReviewLink: "",
   profiles: {
-    facebook: "https://www.facebook.com/serbytedevelopment/",
-    linkedIn: "https://www.linkedin.com/in/austin-serb/",
-    yelp: "https://www.yelp.com/biz/serbyte-development-kirkland-3",
-    pinterest: "https://www.pinterest.com/serbytedevelopment",
-    gbp: "https://g.co/kgs/ay2r1wp",
-    github: "https://github.com/austin1serb",
-    x: "https://x.com/AustinSerb",
+    linkedIn: "https://linkedin.com/in/pawar-manoj/",
+    github: "https://github.com/manoj-9899",
   } as const,
-  logo: "/serbyte-logo.png",
+  logo: "/favicon.ico",
   favicon: "/favicon.ico",
-  images: ["https://www.serbyte.net/serbyte-logo.png", "https://www.serbyte.net/assets/bg-home-poster-optimized.webp"],
+  images: [],
 } as const
 
 export const SITE_SLUGS = {
   home: "/",
   projects: "/projects",
   contact: "/#contact",
-  about: "/#about-austin-serb",
+  about: "/#about-manoj-pawar",
   projectLinks: {
     iao: "/projects/iron-and-oak",
     automedics: "/projects/automedics",
@@ -52,10 +48,10 @@ export const SITE_SLUGS = {
 } as const
 
 export const externalLinks = {
-  vetsChoice: "https://vetschoiceinsurance.com/",
-  zeroIconSprite: "https://github.com/react-zero-ui/icon-sprite",
-  zeroCore: "https://github.com/react-zero-ui/core",
-  entitled: "https://be-entitled.com/",
+  vetsChoice: "https://github.com/manoj-9899",
+  zeroIconSprite: "https://github.com/manoj-9899",
+  zeroCore: "https://github.com/manoj-9899",
+  entitled: "https://github.com/manoj-9899",
 } as const
 
 const flattenSlugs = (obj: Record<string, string | Record<string, string>>): string[] => {

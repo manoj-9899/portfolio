@@ -2,10 +2,8 @@ import { SITE_SLUGS, DOMAIN_URL } from "@/config/siteConfig"
 import type { MetadataRoute } from "next"
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const flatSlugs = Object.values(SITE_SLUGS).flatMap((val) => (typeof val === "string" ? [val] : Object.values(val)))
-
-  // Filter out routes that contain hash symbols (scroll links)
-  const allRoutes = flatSlugs.filter((route) => typeof route === "string" && !route.includes("#"))
+  // Include only canonical public routes for Manoj Pawar's portfolio
+  const allRoutes = [SITE_SLUGS.home, SITE_SLUGS.projects]
 
   return allRoutes.map((url) => ({
     url: DOMAIN_URL + url,
