@@ -23,7 +23,7 @@ export const STATIC_PROJECTS: StaticProject[] = [
   {
     id: "post-quantum-enclave",
     src: postQuantumPreview,
-    alt: "Post-Quantum-Enclave Preview",
+    alt: "Post-Quantum Document Enclave architectural preview",
     color: "#3B06D1",
     type: "Post-Quantum Security Enclave",
     text: "View on GitHub",
@@ -35,7 +35,7 @@ export const STATIC_PROJECTS: StaticProject[] = [
   {
     id: "devhabits",
     src: devhabitsPreview,
-    alt: "DevHabits Preview",
+    alt: "DevHabits habit tracker interface preview",
     color: "#024EFC",
     type: "Local-First Habit Tracker",
     text: "View on GitHub",
@@ -47,7 +47,7 @@ export const STATIC_PROJECTS: StaticProject[] = [
   {
     id: "campuscanteen",
     src: campuscanteenPreview,
-    alt: "CampusCanteen Preview",
+    alt: "CampusCanteen ordering and queue platform preview",
     color: "#DA961A",
     type: "Canteen & Queue Platform",
     text: "View on GitHub",
@@ -59,7 +59,7 @@ export const STATIC_PROJECTS: StaticProject[] = [
   {
     id: "focustube",
     src: focustubePreview,
-    alt: "FocusTube Preview",
+    alt: "FocusTube AI YouTube focus assistant preview",
     color: "#13739C",
     type: "AI YouTube Focus Assistant",
     text: "View on GitHub",
@@ -81,7 +81,7 @@ export const ProjectsStatic: React.FC = () => {
               ? {
                   href: project.href,
                   target: "_blank",
-                  rel: "nofollow noopener",
+                  rel: "noopener noreferrer",
                   "data-text": project.dataText,
                   "aria-label": project.ariaLabel,
                 }

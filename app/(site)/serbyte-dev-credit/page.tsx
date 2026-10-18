@@ -1,6 +1,6 @@
 import { Metadata } from "next"
 
-const PORTFOLIO_URL = "https://manoj-9899.github.io/manojpawar"
+const PORTFOLIO_URL = "/"
 const GITHUB_URL = "https://github.com/manoj-9899"
 const CREDIT_PATH = "/serbyte-dev-credit"
 

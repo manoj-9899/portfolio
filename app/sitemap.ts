@@ -1,14 +1,20 @@
-import { SITE_SLUGS, DOMAIN_URL } from "@/config/siteConfig"
+import { getProductionOrigin, PUBLIC_INDEXABLE_ROUTES } from "@/config/siteConfig"
 import type { MetadataRoute } from "next"
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  // Include only canonical public routes for Manoj Pawar's portfolio
-  const allRoutes = [SITE_SLUGS.home, SITE_SLUGS.projects]
+  const origin = getProductionOrigin()
 
-  return allRoutes.map((url) => ({
-    url: DOMAIN_URL + url,
-    lastModified: new Date().toISOString(),
-    priority: url === "/" ? 1.0 : 0.8,
-    changeFrequency: url === "/" ? "daily" : "weekly",
+  // When the production domain is unconfigured, avoid emitting placeholder, localhost, or outdated domains
+  if (!origin) {
+    return []
+  }
+
+  const lastModified = new Date().toISOString()
+
+  return PUBLIC_INDEXABLE_ROUTES.map((route) => ({
+    url: `${origin}${route === "/" ? "" : route}`,
+    lastModified,
+    changeFrequency: "monthly" as const,
+    priority: route === "/" ? 1.0 : 0.8,
   }))
 }

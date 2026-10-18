@@ -37,3 +37,4 @@ next-env.d.ts
 # *.code-workspace
 # backup files
 app/favicon_.ico
+app/favicon2.ico

@@ -71,7 +71,7 @@ export function ProjectsGrid({ className }: { className?: string }) {
         <AnimatedCard
           key={"react-zero-ui"}
           src={postQuantumPreview}
-          alt={"Post-Quantum-Enclave Preview"}
+          alt={"Post-Quantum Document Enclave architectural preview"}
           offset={offsets["react-zero-ui"]}
           gridId="react-zero-ui"
           color="#3B06D1"
@@ -83,7 +83,7 @@ export function ProjectsGrid({ className }: { className?: string }) {
         <AnimatedCard
           key="DevHabits"
           src={devhabitsPreview}
-          alt={"DevHabits Preview"}
+          alt={"DevHabits habit tracker interface preview"}
           offset={offsets["bespoke"]}
           gridId="bespoke"
           color="#024EFC"
@@ -96,7 +96,7 @@ export function ProjectsGrid({ className }: { className?: string }) {
         <AnimatedCard
           key="CampusCanteen"
           src={campuscanteenPreview}
-          alt={"CampusCanteen Preview"}
+          alt={"CampusCanteen ordering and queue platform preview"}
           offset={offsets["automedics"]}
           gridId="automedics"
           color="#DA961A"
@@ -108,7 +108,7 @@ export function ProjectsGrid({ className }: { className?: string }) {
         <AnimatedCard
           key={"FocusTube"}
           src={focustubePreview}
-          alt={"FocusTube Preview"}
+          alt={"FocusTube AI YouTube focus assistant preview"}
           offset={offsets["iron-and-oak"]}
           gridId="iron-and-oak"
           color="#13739C"

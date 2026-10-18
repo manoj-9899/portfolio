@@ -1,13 +1,17 @@
+import { getProductionOrigin } from "@/config/siteConfig"
 import type { MetadataRoute } from "next"
-import { DOMAIN_URL } from "@/config/siteConfig"
+
 export default function robots(): MetadataRoute.Robots {
+  const origin = getProductionOrigin()
+
   return {
     rules: [
       {
         userAgent: "*",
         allow: "/",
+        disallow: ["/api/", "/serbyte-dev-credit"],
       },
     ],
-    sitemap: `${DOMAIN_URL}/sitemap.xml`,
+    ...(origin ? { sitemap: `${origin}/sitemap.xml` } : {}),
   }
 }

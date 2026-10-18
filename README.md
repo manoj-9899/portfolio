@@ -6,8 +6,8 @@ The portfolio is built with Next.js, React 19, TypeScript, Tailwind CSS v4, and 
 
 ## Live Website & Profiles
 
-- **Portfolio:** [manoj-9899.github.io/manojpawar](https://manoj-9899.github.io/manojpawar/)
 - **GitHub:** [github.com/manoj-9899](https://github.com/manoj-9899)
+- **Repository:** [github.com/manoj-9899/portfolio](https://github.com/manoj-9899/portfolio)
 - **LinkedIn:** [linkedin.com/in/pawar-manoj](https://linkedin.com/in/pawar-manoj/)
 - **Email:** [manojpawar.dev@gmail.com](mailto:manojpawar.dev@gmail.com)
 
@@ -37,11 +37,21 @@ The portfolio is built with Next.js, React 19, TypeScript, Tailwind CSS v4, and 
 - Node.js 18+ (Node 20+ recommended)
 - npm or pnpm
 
+### Environment Configuration
+
+To configure canonical SEO URLs, sitemaps, and absolute Open Graph tags for your production deployment (Vercel or Netlify), set:
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://yourdomain.com
+```
+
+If left unset during local development, the application safely omits external canonical references without fabricating placeholder domains.
+
 ### Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/manoj-9899/manojpawar.git
+git clone https://github.com/manoj-9899/portfolio.git
 
 # Install dependencies
 npm install
