@@ -1,8 +1,9 @@
-import { Icon } from "../Icon"
 import { Link } from "../../utils/Link"
 import { MobileMenuButton } from "./MobileMenuButton"
 import { MobileMenu } from "./MobileMenu"
 import { SITE_SLUGS } from "@/config/siteConfig"
+import Image from "next/image"
+import mpLogo from "@/app/images/mp-logo.png"
 
 const navItems = [
   { name: "Projects", href: SITE_SLUGS.projects },
@@ -19,8 +20,15 @@ export const TopBarV2: React.FC = () => {
           <div className="flex items-center gap-4 px-4 py-3 md:gap-8 md:py-2.5">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 font-medium text-nowrap">
-              <span className="flex h-6 w-6 items-center justify-center rounded bg-black text-[10px] font-bold tracking-tight text-white shadow-md">
-                MP
+              <span className="relative flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden rounded bg-black shadow-md">
+                <Image
+                  src={mpLogo}
+                  alt="Manoj Pawar"
+                  width={24}
+                  height={24}
+                  className="h-full w-full object-cover"
+                  priority
+                />
               </span>
               Manoj Pawar
             </Link>
