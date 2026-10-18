@@ -220,17 +220,47 @@ html {
       background-image: var(--gradient-alt);
     }
 
-    &:hover {
+    /* By default (mobile and touch devices): darker, muted gradient matching desktop hover */
+    &.active {
       &::before {
-        @apply translate-x-0 opacity-30!;
+        @apply translate-x-0 opacity-30;
         animation: fill-from-left 5s ease-out infinite;
       }
     }
-    &.active {
-      &::before {
-        @apply translate-x-0 opacity-70;
-        animation: fill-from-left 5s ease-out infinite;
+
+    /* Desktop devices with hover capability (>= 768px): brighter gradient before hover, darker on hover */
+    @media (min-width: 768px) and (hover: hover) and (pointer: fine) {
+      &.active {
+        &::before {
+          @apply opacity-70;
+        }
       }
+      &:hover {
+        &::before {
+          @apply translate-x-0 opacity-30!;
+          animation: fill-from-left 5s ease-out infinite;
+        }
+      }
+    }
+  }
+
+  /* Mobile and touch devices display the expanded avatar + plus + GitHub logo by default */
+  @media (max-width: 767px), (hover: none) and (pointer: coarse) {
+    .cta-github-badge {
+      display: flex !important;
+      opacity: 1 !important;
+      width: 45px !important;
+      transform: none !important;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bubble-hover-cta::before {
+      animation: none !important;
+      transition: none !important;
+    }
+    .cta-github-badge {
+      transition: none !important;
     }
   }
 
@@ -353,19 +383,19 @@ html {
   }
 
   .large-brand-text {
-    font-size: clamp(90px, 20vw, 240px);
+    font-size: clamp(2.5rem, 14.8vw, 7rem);
     line-height: 1.1;
   }
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     .large-brand-text {
-      font-size: clamp(80px, 20vw, 160px);
-      line-height: 1.4;
+      font-size: clamp(6.5rem, 13.8vw, 11rem);
+      line-height: 1.1;
     }
   }
-  @media (max-width: 540px) {
+  @media (min-width: 1280px) {
     .large-brand-text {
-      font-size: clamp(70px, 20vw, 120px);
-      line-height: 220%;
+      font-size: 240px;
+      line-height: 1.1;
     }
   }
 }

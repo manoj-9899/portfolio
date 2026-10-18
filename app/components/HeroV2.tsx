@@ -14,7 +14,7 @@ export const HeroV2 = () => {
             className="z-2 inline-flex items-center gap-2 self-start rounded-full border border-gray-100 bg-white px-3 py-2 text-xs font-medium shadow-lg"
           >
             <ActivityDot />
-            Lonere, Maharashtra
+            India
           </AnimatedElement>
 
           <h1 className="xs:text-5xl relative z-5 text-4xl leading-[1] font-medium tracking-tight text-slate-900 sm:text-6xl lg:text-7xl">
@@ -29,7 +29,7 @@ export const HeroV2 = () => {
           </h1>
 
           <AnimatedElement element="p" delay={0.6} className="max-w-xs text-sm leading-snug tracking-tight text-slate-700 md:max-w-sm md:pr-4 md:text-base">
-            <strong className="font-semibold text-slate-900">Computer Engineering Student & Developer.</strong> B.Tech at DBATU Lonere, building fast web applications, developer tools, and secure software systems.
+            <strong className="font-semibold text-slate-900">Computer Engineering Student & Developer.</strong> B.Tech at DBATU, building fast web applications, developer tools, and secure software systems.
           </AnimatedElement>
 
           <CallToActionButton />

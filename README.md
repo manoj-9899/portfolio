@@ -19,7 +19,7 @@
 
 ## 📌 Overview
 
-This repository houses the source code for the personal software engineering portfolio of **Manoj Shivaji Pawar**, Computer Engineering undergraduate at **Dr. Babasaheb Ambedkar Technological University (DBATU), Lonere**.
+This repository houses the source code for the personal software engineering portfolio of **Manoj Shivaji Pawar**, Computer Engineering undergraduate at **Dr. Babasaheb Ambedkar Technological University (DBATU)**.
 
 Engineered for extreme performance, clean typography, and search engine discoverability, this portfolio showcases production applications in full-stack web development, post-quantum cryptography, developer tooling, and distributed systems.
 
@@ -214,7 +214,7 @@ flowchart TD
 ```
 
 1. **Schema.org Linked Graph:**
-   - **`Person`:** Declares Manoj Shivaji Pawar, educational affiliation (DBATU Lonere), authenticated GitHub & LinkedIn profiles, and verified technical proficiencies.
+   - **`Person`:** Declares Manoj Shivaji Pawar, educational affiliation (DBATU), authenticated GitHub & LinkedIn profiles, and verified technical proficiencies.
    - **`WebSite`:** Identifies the official developer portfolio with author attribution.
    - **`ProfilePage`:** Formal declaration of the homepage as the primary entity profile.
    - **`CollectionPage` & `ItemList`:** Structured project entities indexing all four authentic open-source projects with direct code repositories and descriptions.
@@ -258,7 +258,7 @@ To configure on an alternative platform (e.g., Netlify or Cloudflare Pages):
 
 **Manoj Shivaji Pawar**  
 *Computer Engineering Student & Full-Stack Developer*  
-Dr. Babasaheb Ambedkar Technological University (DBATU), Lonere, Maharashtra, India
+Dr. Babasaheb Ambedkar Technological University (DBATU), India
 
 - **Portfolio:** [manojpawar.vercel.app](https://manojpawar.vercel.app)
 - **GitHub:** [@manoj-9899](https://github.com/manoj-9899)

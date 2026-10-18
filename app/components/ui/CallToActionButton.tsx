@@ -76,7 +76,7 @@ export const CallToActionButton = () => {
           </div>
 
           {/* + You entrance */}
-          <MotionDiv variants={youVariants} className={clsx("hidden items-center gap-1 md:flex")}>
+          <MotionDiv variants={youVariants} className={clsx("cta-github-badge flex items-center gap-1 overflow-hidden")}>
             <span className="text-xl">+</span>
             <Icon
               name="github"
