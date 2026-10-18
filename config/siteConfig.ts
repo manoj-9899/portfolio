@@ -100,11 +100,6 @@ export const SITE_SLUGS = {
   projects: "/projects",
   contact: "/#contact",
   about: "/#about-manoj-pawar",
-  projectLinks: {
-    iao: "/projects/iron-and-oak",
-    automedics: "/projects/automedics",
-    bespoke: "/projects/bespoke",
-  },
 } as const
 
 export const PUBLIC_INDEXABLE_ROUTES = [SITE_SLUGS.home, SITE_SLUGS.projects] as const

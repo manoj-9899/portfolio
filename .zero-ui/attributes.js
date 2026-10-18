@@ -6,7 +6,6 @@ export const bodyAttributes = {
 };
 export const variantKeyMap = {
   "data-mobile-menu": true,
-  "data-phase": true,
   "data-reveal": true,
   "data-scrolled": true
 };

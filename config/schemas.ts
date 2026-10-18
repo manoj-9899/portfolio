@@ -1,4 +1,3 @@
-import { ProjectData } from "@/app/data/project-data"
 import {
   getProductionOrigin,
   SITE_CONFIG,
@@ -195,30 +194,3 @@ export const siteGraph = getSiteGraph(PRODUCTION_ORIGIN)
 export const homeGraph = getHomeGraph(PRODUCTION_ORIGIN)
 export const projectsGraph = getProjectsGraph(PRODUCTION_ORIGIN)
 
-const imgSrc = (x?: { src?: string } | string) => (typeof x === "string" ? x : x?.src)
-
-export function buildProjectGraphMinimal(slug: string, pd: ProjectData, type = "CreativeWork" as const): Graph {
-  const base = getProductionOrigin() || ""
-  const id = `${base}${SITE_SLUGS.projects}/${slug}`
-  const title = typeof pd.hero.title === "string" ? pd.hero.title : "Case Study"
-  const description = typeof pd.hero.description === "string" ? pd.hero.description : undefined
-  const image = imgSrc(pd.beforeAfter?.heroAfter) || imgSrc(pd.beforeAfter?.heroBefore)
-
-  return {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": type,
-        "@id": id,
-        ...(base ? { url: id } : {}),
-        name: title,
-        ...(description ? { description } : {}),
-        ...(image ? { image } : {}),
-        ...(pd.hero.link ? { sameAs: [pd.hero.link] } : {}),
-        mainEntityOfPage: id,
-        author: { "@id": base ? `${base}/#manoj-pawar` : "#manoj-pawar" },
-        inLanguage: "en",
-      },
-    ],
-  }
-}
