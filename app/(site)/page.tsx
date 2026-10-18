@@ -15,11 +15,11 @@ export const metadata: Metadata = {
     absolute: SITE_CONFIG.defaultTitle,
   },
   description: SITE_CONFIG.description,
-  alternates: canonical ? { canonical } : undefined,
+  alternates: { canonical },
   openGraph: {
     type: "website",
     locale: SITE_CONFIG.locale,
-    url: productionOrigin ? `${productionOrigin}/` : undefined,
+    url: canonical,
     siteName: SITE_CONFIG.siteName,
     title: SITE_CONFIG.defaultTitle,
     description: SITE_CONFIG.description,

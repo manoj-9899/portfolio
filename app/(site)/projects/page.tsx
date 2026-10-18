@@ -11,11 +11,11 @@ const productionOrigin = getProductionOrigin()
 export const metadata: Metadata = {
   title: SITE_CONFIG.projectsTitle,
   description: SITE_CONFIG.projectsDescription,
-  alternates: canonical ? { canonical } : undefined,
+  alternates: { canonical },
   openGraph: {
     type: "website",
     locale: SITE_CONFIG.locale,
-    url: productionOrigin ? `${productionOrigin}${SITE_SLUGS.projects}` : undefined,
+    url: canonical,
     siteName: SITE_CONFIG.siteName,
     title: `${SITE_CONFIG.projectsTitle} | ${SITE_CONFIG.siteName}`,
     description: SITE_CONFIG.projectsDescription,

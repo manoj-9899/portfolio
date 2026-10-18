@@ -22,7 +22,7 @@ const switzer = localFont({
 const productionOrigin = getProductionOrigin()
 
 export const metadata: Metadata = {
-  ...(productionOrigin ? { metadataBase: new URL(productionOrigin) } : {}),
+  metadataBase: new URL(productionOrigin),
   title: {
     default: SITE_CONFIG.defaultTitle,
     template: SITE_CONFIG.titleTemplate,
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: SITE_CONFIG.locale,
-    url: productionOrigin ? `${productionOrigin}/` : undefined,
+    url: productionOrigin,
     siteName: SITE_CONFIG.siteName,
     title: SITE_CONFIG.defaultTitle,
     description: SITE_CONFIG.description,

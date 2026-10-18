@@ -130,7 +130,7 @@ export function getHomeGraph(origin: string | undefined = getProductionOrigin())
       {
         "@type": "ProfilePage",
         "@id": pageId,
-        ...(base ? { url: `${base}/` } : {}),
+        ...(base ? { url: base } : {}),
         name: SITE_CONFIG.defaultTitle,
         description: SITE_CONFIG.description,
         isPartOf: { "@id": websiteId },

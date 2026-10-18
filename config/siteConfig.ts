@@ -1,38 +1,35 @@
 /**
  * Site Configuration for Manoj Pawar's Developer Portfolio
  *
- * PRODUCTION DOMAIN NOTE:
- * The production domain is currently undecided (pending final hosting platform choice between Vercel and Netlify).
- * Set the environment variable NEXT_PUBLIC_SITE_URL (or SITE_URL) in your hosting dashboard
- * (e.g. NEXT_PUBLIC_SITE_URL=https://your-custom-domain.com or https://portfolio.vercel.app).
- *
- * When unset, the application builds cleanly without fabricating canonical URLs or leaking
- * development/localhost URLs into production search engine directives.
+ * PRODUCTION DEPLOYMENT:
+ * The production website is deployed at https://manojpawar.vercel.app.
+ * Environment variables NEXT_PUBLIC_SITE_URL or SITE_URL can be set
+ * to override this (e.g. if a custom domain is attached in Vercel later).
  */
 
-export const getProductionOrigin = (): string | undefined => {
+export const PRODUCTION_URL = "https://manojpawar.vercel.app"
+
+export const getProductionOrigin = (): string => {
   const envUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL
   if (envUrl && envUrl.trim() !== "") {
     return envUrl.trim().replace(/\/+$/, "")
   }
-  return undefined
+  return PRODUCTION_URL
 }
 
 export const PRODUCTION_ORIGIN = getProductionOrigin()
 
 /**
- * Backward-compatible alias. Returns the configured production origin or an empty string.
+ * Backward-compatible alias. Returns the configured production origin.
  * @deprecated Prefer `getProductionOrigin()` or `PRODUCTION_ORIGIN`.
  */
-export const DOMAIN_URL = PRODUCTION_ORIGIN || ""
+export const DOMAIN_URL = PRODUCTION_ORIGIN
 
 /**
  * Helper to compute canonical URLs safely.
- * Returns undefined when production origin is unconfigured to prevent generating fake canonicals.
  */
-export const getCanonicalUrl = (path: string = "/"): string | undefined => {
+export const getCanonicalUrl = (path: string = "/"): string => {
   const origin = getProductionOrigin()
-  if (!origin) return undefined
   const normalizedPath = path.startsWith("/") ? path : `/${path}`
   return `${origin}${normalizedPath === "/" ? "" : normalizedPath}`
 }
