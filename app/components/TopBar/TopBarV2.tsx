@@ -20,7 +20,7 @@ export const TopBarV2: React.FC = () => {
           <div className="flex items-center gap-4 px-4 py-3 md:gap-8 md:py-2.5">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 font-medium text-nowrap">
-              <span className="relative flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden rounded bg-black shadow-md">
+              <span className="relative flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden rounded-full">
                 <Image
                   src={mpLogo}
                   alt="Manoj Pawar"
