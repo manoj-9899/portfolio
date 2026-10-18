@@ -28,7 +28,7 @@ The portfolio is built with Next.js, React 19, TypeScript, Tailwind CSS v4, and 
 - **Languages:** C++, Python, JavaScript, TypeScript, SQL
 - **Frontend:** React, Next.js (App Router), Tailwind CSS v4, Motion
 - **Backend & APIs:** Node.js, Express.js, Prisma, REST APIs
-- **Databases:** PostgreSQL, SQLite, Supabase
+- **Databases:** PostgreSQL, MongoDB, SQLite, Supabase
 - **Tools & Platforms:** Git, GitHub, Linux, VS Code
 
 ## Getting Started

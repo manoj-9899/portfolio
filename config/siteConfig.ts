@@ -60,6 +60,8 @@ export const SITE_CONFIG = {
     "Post-Quantum Cryptography",
     "Python",
     "C++",
+    "MongoDB",
+    "PostgreSQL",
   ],
   ogImage: "/opengraph-image.jpg",
   ogImageAlt: "Manoj Pawar - Software Developer & Computer Engineering Student Portfolio",

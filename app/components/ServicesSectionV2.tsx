@@ -14,7 +14,7 @@ const tech = [
   { name: "Express.js", src: "express" },
   { name: "Node.js", src: "nodejs" },
   { name: "PostgreSQL", src: "postgresql" },
-  { name: "Tailwind CSS", src: "tailwind" },
+  { name: "MongoDB", src: "mongodb" },
   { name: "Git & Linux", src: "github" },
 ]
 

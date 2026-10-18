@@ -98,7 +98,7 @@ export function getSiteGraph(origin: string | undefined = getProductionOrigin())
           "C++",
           "SQL",
           "PostgreSQL",
-          "Tailwind CSS",
+          "MongoDB",
         ],
       },
       {
