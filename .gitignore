@@ -38,3 +38,6 @@ next-env.d.ts
 # backup files
 app/favicon_.ico
 app/favicon2.ico
+
+# scratch & test artifacts
+scratch/

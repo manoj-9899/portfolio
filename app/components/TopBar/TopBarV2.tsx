@@ -7,6 +7,7 @@ import mpLogo from "@/app/images/mp-logo.png"
 
 const navItems = [
   { name: "Projects", href: SITE_SLUGS.projects },
+  { name: "Articles", href: SITE_SLUGS.articles },
   { name: "About", href: SITE_SLUGS.about },
 ]
 

@@ -45,6 +45,9 @@ export const SITE_CONFIG = {
   projectsTitle: "Projects",
   projectsDescription:
     "Featured software engineering projects by Manoj Pawar, including post-quantum document security enclaves, local-first productivity tooling, and full-stack web applications.",
+  articlesTitle: "Articles",
+  articlesDescription:
+    "Technical writing, architecture breakdowns, and engineering deep dives by Manoj Pawar into post-quantum cryptography, systems architecture, and modern web platforms.",
   url: DOMAIN_URL,
   keywords: [
     "Manoj Pawar",
@@ -100,11 +103,12 @@ export const SITE_NAP = {
 export const SITE_SLUGS = {
   home: "/",
   projects: "/projects",
+  articles: "/articles",
   contact: "/#contact",
   about: "/#about-manoj-pawar",
 } as const
 
-export const PUBLIC_INDEXABLE_ROUTES = [SITE_SLUGS.home, SITE_SLUGS.projects] as const
+export const PUBLIC_INDEXABLE_ROUTES = [SITE_SLUGS.home, SITE_SLUGS.projects, SITE_SLUGS.articles] as const
 
 export const externalLinks = {
   vetsChoice: "https://github.com/manoj-9899",

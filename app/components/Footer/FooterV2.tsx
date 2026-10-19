@@ -54,6 +54,9 @@ export const FooterV2: React.FC = () => {
             <Link href={SITE_SLUGS.projects} className="text-sm transition-colors duration-200 hover:text-gray-300">
               Projects
             </Link>
+            <Link href={SITE_SLUGS.articles} className="text-sm transition-colors duration-200 hover:text-gray-300">
+              Articles
+            </Link>
             <Link href={SITE_SLUGS.about} className="text-sm transition-colors duration-200 hover:text-gray-300">
               About
             </Link>
