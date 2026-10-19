@@ -5,12 +5,13 @@ import { AnimatedElement } from "@/app/components/ui/AnimatedElement"
 import { Icon } from "@/app/components/Icon"
 import { RecruiterContact } from "@/app/components/RecruiterContact"
 import { getProductionOrigin, getCanonicalUrl, SITE_CONFIG, SITE_SLUGS } from "@/config/siteConfig"
+import { getArticlesGraph, serializeJsonLd } from "@/config/schemas"
 
 const canonical = getCanonicalUrl(SITE_SLUGS.articles)
 const productionOrigin = getProductionOrigin()
 
 export const metadata: Metadata = {
-  title: `${SITE_CONFIG.articlesTitle} | ${SITE_CONFIG.siteName}`,
+  title: SITE_CONFIG.articlesTitle,
   description: SITE_CONFIG.articlesDescription,
   alternates: { canonical },
   openGraph: {
@@ -43,6 +44,13 @@ export default function ArticlesPage() {
 
   return (
     <main className="relative z-1">
+      <script
+        id="jsonld-articles"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: serializeJsonLd(getArticlesGraph(productionOrigin)),
+        }}
+      />
       {/* Editorial Header */}
       <div className="inside-container-large">
         <div className="flex flex-col items-center gap-6 max-md:px-5.5">

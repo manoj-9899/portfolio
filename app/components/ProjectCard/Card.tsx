@@ -8,6 +8,7 @@ export const Card = ({
   type = "",
   reveal = true,
   text = "View Project",
+  priority = false,
 }: {
   src?: StaticImageData | string
   alt: string
@@ -15,6 +16,7 @@ export const Card = ({
   type?: string
   reveal?: boolean
   text?: string
+  priority?: boolean
 }) => {
   return (
     <div
@@ -40,7 +42,7 @@ export const Card = ({
           </span>
         </span>
         {src ? (
-          <Image className="h-full w-full bg-gray-200 object-cover" src={src} alt={alt} priority decoding="async" />
+          <Image className="h-full w-full bg-gray-200 object-cover" src={src} alt={alt} priority={priority} decoding="async" />
         ) : (
           <div
             className="relative h-full w-full min-h-[260px] overflow-hidden bg-slate-950 md:min-h-[300px]"

@@ -75,7 +75,7 @@ export const ProjectsStatic: React.FC = () => {
     <section className="border-t border-slate-200">
       <div className="inside-container-small">
         <div className="relative z-4 grid grid-cols-1 grid-rows-1 gap-4 md:grid-cols-2 md:grid-rows-2">
-          {STATIC_PROJECTS.map((project) => {
+          {STATIC_PROJECTS.map((project, index) => {
             const Tag = project.isExternal ? "a" : Link
             const tagProps = project.isExternal
               ? {
@@ -94,7 +94,15 @@ export const ProjectsStatic: React.FC = () => {
 
             return (
               <Tag key={project.id} {...tagProps}>
-                <Card src={project.src} alt={project.alt} color={project.color} type={project.type} reveal={false} text={project.text} />
+                <Card
+                  src={project.src}
+                  alt={project.alt}
+                  color={project.color}
+                  type={project.type}
+                  reveal={false}
+                  text={project.text}
+                  priority={index < 2}
+                />
               </Tag>
             )
           })}

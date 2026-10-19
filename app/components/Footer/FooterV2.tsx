@@ -67,9 +67,9 @@ export const FooterV2: React.FC = () => {
         </div>
         <div className="flex flex-col-reverse justify-between gap-2 text-xs text-nowrap md:flex-row">
           <div className="flex items-center gap-5.5 max-sm:flex-wrap">
-            <h3>
+            <p>
               <span className="text-[#b8b8b8]">Based in </span> India
-            </h3>
+            </p>
             <div className="flex gap-4">
               {/* <Link href="/terms-of-service" className="text-sm transition-colors duration-200 hover:text-gray-300">
                 Terms of Service
@@ -81,9 +81,9 @@ export const FooterV2: React.FC = () => {
           </div>
           <span className="text-[#b8b8b8]">© 2026 Manoj Shivaji Pawar</span>
         </div>
-        <h2 className="large-brand-text absolute bottom-2 left-0 flex w-full items-center justify-center text-[clamp(2.5rem,14.8vw,7rem)] font-medium whitespace-nowrap text-white md:bottom-4 md:text-[clamp(6.5rem,13.8vw,11rem)] lg:bottom-6 xl:-bottom-16 xl:text-[240px]">
+        <span aria-hidden="true" className="large-brand-text absolute bottom-2 left-0 flex w-full select-none items-center justify-center text-[clamp(2.5rem,14.8vw,7rem)] font-medium whitespace-nowrap text-white md:bottom-4 md:text-[clamp(6.5rem,13.8vw,11rem)] lg:bottom-6 xl:-bottom-16 xl:text-[240px]">
           Manoj Pawar
-        </h2>
+        </span>
       </div>
     </footer>
   )

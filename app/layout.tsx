@@ -32,7 +32,6 @@ export const metadata: Metadata = {
   authors: [{ name: SITE_CONFIG.fullName, url: PERSONAL_INFO.profiles.github }],
   creator: SITE_CONFIG.fullName,
   publisher: SITE_CONFIG.fullName,
-  keywords: [...SITE_CONFIG.keywords],
   formatDetection: {
     email: false,
     address: false,

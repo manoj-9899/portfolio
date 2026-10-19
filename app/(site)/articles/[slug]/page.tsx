@@ -6,7 +6,10 @@ import { ArticleRenderer } from "@/app/components/ArticleRenderer"
 import { getArticleComponent } from "@/app/components/articles"
 import { RecruiterContact } from "@/app/components/RecruiterContact"
 import { Icon } from "@/app/components/Icon"
-import { getCanonicalUrl, SITE_CONFIG } from "@/config/siteConfig"
+import { getCanonicalUrl, getProductionOrigin, SITE_CONFIG } from "@/config/siteConfig"
+import { getArticleDetailGraph, serializeJsonLd } from "@/config/schemas"
+
+const productionOrigin = getProductionOrigin()
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -30,7 +33,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const canonical = getCanonicalUrl(`/articles/${article.slug}`)
 
   return {
-    title: `${article.title} | ${SITE_CONFIG.siteName}`,
+    title: article.title,
     description: article.summary,
     alternates: { canonical },
     openGraph: {
@@ -74,6 +77,13 @@ export default async function ArticleDetailPage({ params }: PageProps) {
 
   return (
     <main className="relative z-1">
+      <script
+        id="jsonld-article-detail"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: serializeJsonLd(getArticleDetailGraph(article, productionOrigin)),
+        }}
+      />
       <div className="inside-container pt-28 pb-16 sm:pt-32 sm:pb-24">
         {/* Navigation / Return link */}
         <div className="mb-8">

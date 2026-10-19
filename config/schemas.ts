@@ -5,7 +5,8 @@ import {
   SITE_SLUGS,
   PRODUCTION_ORIGIN,
 } from "./siteConfig"
-import type { Graph, ItemList } from "schema-dts"
+import type { Graph, ItemList, BreadcrumbList, TechArticle } from "schema-dts"
+import { getPublishedArticles, type Article } from "@/app/data/articles"
 
 export interface ProjectItem {
   name: string
@@ -171,10 +172,30 @@ export function getProjectsGraph(origin: string | undefined = getProductionOrigi
     })),
   }
 
+  const breadcrumbs: BreadcrumbList = {
+    "@type": "BreadcrumbList",
+    "@id": base ? `${base}${SITE_SLUGS.projects}#breadcrumb` : "#projects-breadcrumb",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: base || "/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: SITE_CONFIG.projectsTitle,
+        item: base ? `${base}${SITE_SLUGS.projects}` : SITE_SLUGS.projects,
+      },
+    ],
+  }
+
   return {
     "@context": "https://schema.org",
     "@graph": [
       itemList,
+      breadcrumbs,
       {
         "@type": "CollectionPage",
         "@id": pageId,
@@ -189,8 +210,141 @@ export function getProjectsGraph(origin: string | undefined = getProductionOrigi
   }
 }
 
+/**
+ * Generates Articles index schema containing CollectionPage, ItemList, and BreadcrumbList
+ */
+export function getArticlesGraph(origin: string | undefined = getProductionOrigin()): Graph {
+  const base = origin || ""
+  const websiteId = base ? `${base}/#website` : "#website"
+  const pageId = base ? `${base}${SITE_SLUGS.articles}#page` : "#articles-page"
+  const listId = base ? `${base}${SITE_SLUGS.articles}#list` : "#articles-list"
+  const authorRef = { "@id": base ? `${base}/#manoj-pawar` : "#manoj-pawar" }
+  const publishedArticles = getPublishedArticles()
+
+  const itemList: ItemList = {
+    "@type": "ItemList",
+    "@id": listId,
+    name: "Technical Articles & Engineering Breakdowns by Manoj Pawar",
+    itemListOrder: "Descending",
+    numberOfItems: publishedArticles.length,
+    itemListElement: publishedArticles.map((article, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: article.title,
+      item: {
+        "@type": "TechArticle",
+        name: article.title,
+        headline: article.title,
+        description: article.summary,
+        url: base ? `${base}/articles/${article.slug}` : `/articles/${article.slug}`,
+        datePublished: article.dateISO,
+        author: authorRef,
+      },
+    })),
+  }
+
+  const breadcrumbs: BreadcrumbList = {
+    "@type": "BreadcrumbList",
+    "@id": base ? `${base}${SITE_SLUGS.articles}#breadcrumb` : "#articles-breadcrumb",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: base || "/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: SITE_CONFIG.articlesTitle,
+        item: base ? `${base}${SITE_SLUGS.articles}` : SITE_SLUGS.articles,
+      },
+    ],
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      itemList,
+      breadcrumbs,
+      {
+        "@type": "CollectionPage",
+        "@id": pageId,
+        ...(base ? { url: `${base}${SITE_SLUGS.articles}` } : {}),
+        name: `${SITE_CONFIG.articlesTitle} | ${SITE_CONFIG.siteName}`,
+        description: SITE_CONFIG.articlesDescription,
+        isPartOf: { "@id": websiteId },
+        mainEntity: { "@id": listId },
+        inLanguage: "en",
+      },
+    ],
+  }
+}
+
+/**
+ * Generates Article Detail schema containing TechArticle and BreadcrumbList
+ */
+export function getArticleDetailGraph(article: Article, origin: string | undefined = getProductionOrigin()): Graph {
+  const base = origin || ""
+  const websiteId = base ? `${base}/#website` : "#website"
+  const articleUrl = base ? `${base}/articles/${article.slug}` : `/articles/${article.slug}`
+  const articleId = `${articleUrl}#article`
+  const authorRef = { "@id": base ? `${base}/#manoj-pawar` : "#manoj-pawar" }
+  const imageUrl = base ? `${base}${SITE_CONFIG.ogImage}` : SITE_CONFIG.ogImage
+
+  const techArticle: TechArticle = {
+    "@type": "TechArticle",
+    "@id": articleId,
+    headline: article.title,
+    description: article.summary,
+    url: articleUrl,
+    mainEntityOfPage: articleUrl,
+    datePublished: article.dateISO,
+    dateModified: article.dateISO,
+    inLanguage: "en",
+    author: authorRef,
+    publisher: authorRef,
+    articleSection: article.category,
+    keywords: article.tags?.join(", "),
+    image: imageUrl,
+    isPartOf: { "@id": websiteId },
+  }
+
+  const breadcrumbs: BreadcrumbList = {
+    "@type": "BreadcrumbList",
+    "@id": `${articleUrl}#breadcrumb`,
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: base || "/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: SITE_CONFIG.articlesTitle,
+        item: base ? `${base}${SITE_SLUGS.articles}` : SITE_SLUGS.articles,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: article.title,
+        item: articleUrl,
+      },
+    ],
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [techArticle, breadcrumbs],
+  }
+}
+
 // Backward-compatible static exports
 export const siteGraph = getSiteGraph(PRODUCTION_ORIGIN)
 export const homeGraph = getHomeGraph(PRODUCTION_ORIGIN)
 export const projectsGraph = getProjectsGraph(PRODUCTION_ORIGIN)
+export const articlesGraph = getArticlesGraph(PRODUCTION_ORIGIN)
+
 

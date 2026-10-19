@@ -22,8 +22,7 @@ export const HeroV2 = () => {
               Manoj Pawar
             </AnimatedElement>{" "}
             <br />
-            <AnimatedElement element="span" offsetPx={40} delay={0.2} fadeDirection="top" className="inline-block"></AnimatedElement>
-            <AnimatedElement element="span" delay={0.4} offsetPx={20} fadeDirection="left" className="inline-block text-slate-700">
+            <AnimatedElement element="span" delay={0.3} offsetPx={20} fadeDirection="left" className="inline-block text-slate-700">
               Portfolio
             </AnimatedElement>
           </h1>
